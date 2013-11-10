@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    BOOL canBeAnimated, animationFinished;
+    IBOutlet UIImageView *greenButtonImage, *redButtonImage;
+}
+
+@property (nonatomic, retain) UIImageView *greenButtonImage, *redButtonImage;
+@property (nonatomic) BOOL canBeAnimated, animationFinished;
+
+- (IBAction)longPress:(UIButton *)sender;
+- (IBAction)cancelLongPress:(UIButton *)sender;
 
 @end
